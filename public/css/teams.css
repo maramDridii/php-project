@@ -1,0 +1,151 @@
+:root {
+    --card-bg: #1c2333;
+    --card-hover-bg: rgba(42, 48, 56, 0.9);
+    --text-color: #ffffff;
+    --border-color: #357e1f;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: var(--text-color);
+    margin: 0;
+    background: url('../images/bg3.jpg') fixed; /* Center and fix the background */
+    background-size: cover; /* Cover the entire background */
+    background-attachment: fixed; /* Make the background stay fixed */
+}
+
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5em;
+}
+
+.teams-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding: 20px;
+}
+
+.team-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+    height: 400px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .teams-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 0;
+    }
+
+    .team-card {
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-card {
+        padding: 15px;
+    }
+}
+
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    opacity: 1; /* Always visible */
+}
+
+.team-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+
+.image-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.carousel-image {
+    flex: 1;
+    display: none;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carousel-image:first-child {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 48, 56, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-card:hover .overlay {
+    opacity: 1;
+}
+
+.team-card:hover .image-carousel {
+    opacity: 0; /* Hide images on hover */
+}
+
+.team-card:hover {
+    color: var(--text-color);
+}
+.button-container {
+    text-align: center; /* Center align the buttons */
+    margin: 20px 0; /* Space above and below the button */
+}
+
+.action-button {
+    background-color: var(--border-color); /* Use your defined border color */
+    color: var(--text-color); /* White text */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Add some padding */
+    font-size: 1.2em; /* Increase font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.action-button a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color from button */
+}
+
+.action-button:hover {
+    background-color: rgba(76, 110, 73, 0.8); /* Slightly lighter on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}

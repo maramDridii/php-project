@@ -1,0 +1,115 @@
+:root {
+    --bg-color: #1c2333; /* Dark background color */
+    --text-color: #ffffff; /* White text */
+    --accent-color: #339427; /* Bright green accent color */
+    --border-color: #339427; /* Green border color */
+    --box-shadow: 0 4px 20px rgba(0, 255, 191, 0.3); /* Soft green shadow */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: var(--text-color);
+    margin: 0;
+    background: url('../images/bg3.jpg') fixed;
+    background-size: cover;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    background: rgba(28, 35, 51, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    width: 90%;
+    max-width: 500px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+select,
+input[type="submit"] , button[class="delete"]{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: var(--accent-color);
+    color: black; /* Black text for contrast */
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: darken(var(--accent-color), 10%);
+    transform: translateY(-2px);
+}
+button{
+    background-color: var(--accent-color);
+    color: black; /* Black text for contrast */
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+button:hover{
+    background-color: darken(var(--accent-color), 10%);
+    transform: translateY(-2px);
+}
+select {
+    background-color: rgba(28, 35, 51, 0.8); /* Dark background */
+    color: var(--text-color); /* White text */
+    border: 2px solid var(--border-color);
+}
+
+select option {
+    background-color: rgba(28, 35, 51, 0.8); /* Same dark background for options */
+    color: var(--text-color); /* White text for options */
+}
+
+select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+    outline: none;
+}
+h2,h3{
+    background-color: black;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 95%;
+    }
+}

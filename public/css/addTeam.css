@@ -1,0 +1,89 @@
+:root {
+    --bg-color: #1c2333; /* Dark background color */
+    --text-color: #ffffff; /* White text */
+    --accent-color: #339427; /* Bright green accent color */
+    --border-color: #339427; /* Green border color */
+    --box-shadow: 0 4px 20px rgba(0, 255, 191, 0.3); /* Soft green shadow */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: var(--text-color);
+    margin: 0;
+    background: url('../images/bg3.jpg') fixed; /* Center and fix the background */
+    background-size: cover; /* Cover the entire background */
+    background-attachment: fixed; /* Make the background stay fixed */
+}
+.add-team-page {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-team-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.add-team-page form {
+    background: rgba(28, 35, 51, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    width: 90%;
+    max-width: 500px;
+}
+
+.add-team-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.add-team-page input[type="text"],
+.add-team-page input[type="file"],
+.add-team-page input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-team-page input[type="text"]:focus,
+.add-team-page input[type="file"]:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+    outline: none;
+}
+
+.add-team-page input[type="submit"] {
+    background-color: var(--accent-color);
+    color: black; /* Black text for contrast */
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-team-page input[type="submit"]:hover {
+    background-color: darken(var(--accent-color), 10%);
+    transform: translateY(-2px);
+}
+
+.add-team-page p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+    .add-team-page form {
+        width: 95%;
+    }
+}

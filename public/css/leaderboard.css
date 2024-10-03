@@ -1,0 +1,66 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1e1e2f; /* Dark background */
+    color: #ffffff; /* White text */
+    margin: 0;
+    background: url('../images/bg3.jpg') fixed; /* Center and fix the background */
+    background-size: cover; /* Cover the entire background */
+    background-attachment: fixed; /* Make the background stay fixed */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ffffff; /* Highlight color for headings */
+}
+
+section {
+    background: #2c2c3a; /* Slightly lighter background for sections */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background-color: #3b3b4f; /* Header background */
+    color: #ffffff; /* Header text color */
+}
+
+tr:hover {
+    background-color: #454564; /* Row hover effect */
+}
+
+tr:nth-child(even) {
+    background-color: #2e2e3a; /* Zebra striping */
+}
+
+p {
+    text-align: center;
+    color: #ffffff; /* Message color */
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px; /* Smaller text on small screens */
+    }
+    th, td {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,31 @@
+footer {
+    background-color: var(--card-bg); /* Use your card background color */
+    color: var(--text-color); /* Text color */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Center text */
+}
+
+.footer-container {
+    max-width: 1200px; /* Limit the width of the footer content */
+    margin: 0 auto; /* Center the footer */
+}
+
+.footer-container p {
+    margin: 0; /* Remove default margin */
+}
+
+.social-icons {
+    margin-top: 10px; /* Space above social icons */
+}
+
+.social-icon {
+    color: var(--text-color); /* Match text color */
+    margin: 0 10px; /* Space between icons */
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.social-icon:hover {
+    color: #00ffbf; /* Change color on hover */
+}

@@ -1,0 +1,189 @@
+:root {
+    --game-color-primary: #ffff00;
+    --game-color-secondary: #0d9414;
+    --game-color-accent: #ff0000;
+    --game-color-body-font: #f4f4f4;
+    --game-color-dark: #0f220d;
+    --game-color-dgray: #313d31;
+    --game-color-light: #e1e0d9;
+    --font-primary: "Quicksand", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: #000;
+    color: var(--game-color-light);
+    background: url('../images/bg.png');
+    background-size: cover;
+}
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(2, 2, 2, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #65d378;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+table th {
+    background-color: #1c4d16;
+    color: #ffffff;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+table tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+table tr td {
+    transition: transform 0.2s;
+}
+
+table tr td:hover {
+    transform: scale(1.05);
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3b7421;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #032905;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+}
+
+.pagination a.active {
+    background-color: #3c9748;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #d0f0d3;
+}
+header {
+    text-align: center; /* Center text and form elements */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+header form {
+    display: inline-flex; /* Use inline-flex for better centering */
+    align-items: center; /* Center vertically */
+}
+
+header form input[type="text"] {
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    width: 300px; /* Fixed width for the input */
+    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    color: #fff; /* White text */
+}
+
+header form input[type="text"]:focus {
+    outline: none; /* Remove default outline */
+    border-color: #00ffbf; /* Highlight border on focus */
+}
+
+header form button {
+    padding: 8px 10px; /* Smaller padding */
+    border: none;
+    background-color: var(--border-color);
+    color: #7d9c79; /* Black text */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Space between input and button */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+header form button:hover {
+    background-color: #00cc99; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+
